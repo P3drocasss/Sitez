@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+:root {
+  color-scheme: light;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.container-responsive {
+  @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center rounded-2xl px-5 py-3 font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+}
+
+.btn-primary {
+  @apply bg-primary text-white hover:bg-primary-800 focus-visible:ring-primary-300 ring-offset-white shadow-soft;
+}
+
+.btn-secondary {
+  @apply bg-white text-slate-900 hover:bg-slate-100 focus-visible:ring-slate-300 ring-offset-white border border-slate-200 shadow;
+}
+
+.card {
+  @apply rounded-2xl bg-white shadow-soft ring-1 ring-slate-100;
+}
+
+
