@@ -1,6 +1,5 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import type { Variants } from 'framer-motion'
 
 const shortVideos = [
   { src: '/media/short_video1.mp4' },
@@ -16,18 +15,17 @@ const longVideos = [
 ]
 
 export const Work: React.FC = () => {
-  const containerVariants: Variants = {
+  const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-        duration: 0.6
+        staggerChildren: 0.1
       }
     }
   }
 
-  const videoVariants: Variants = {
+  const videoVariants = {
     hidden: { y: 50, opacity: 0, scale: 0.9 },
     visible: {
       y: 0,
@@ -36,13 +34,12 @@ export const Work: React.FC = () => {
       transition: {
         type: "spring",
         stiffness: 100,
-        damping: 12,
-        duration: 0.6
+        damping: 12
       }
     }
   }
 
-  const sectionVariants: Variants = {
+  const sectionVariants = {
     hidden: { y: 30, opacity: 0 },
     visible: {
       y: 0,
@@ -50,8 +47,7 @@ export const Work: React.FC = () => {
       transition: {
         type: "spring",
         stiffness: 100,
-        damping: 12,
-        duration: 0.6
+        damping: 12
       }
     }
   }

@@ -1,24 +1,14 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import type { Variants } from 'framer-motion'
 
 export const Header: React.FC = () => {
-  const headerVariants: Variants = {
-    initial: { y: -100, opacity: 0 },
-    animate: { 
-      y: 0, 
-      opacity: 1,
-      transition: { duration: 0.6, ease: "easeOut" }
-    }
-  }
-
   return (
     <motion.header 
       role="banner" 
       className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200"
-      variants={headerVariants}
-      initial="initial"
-      animate="animate"
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div className="container-responsive flex h-16 items-center justify-between">
         <motion.a 
