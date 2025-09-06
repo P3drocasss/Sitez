@@ -31,7 +31,7 @@ export const Work: React.FC = () => {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.8
+        duration: 0.8,
       }
     }
   }
@@ -42,7 +42,7 @@ export const Work: React.FC = () => {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.8
+        duration: 0.8,
       }
     }
   }
