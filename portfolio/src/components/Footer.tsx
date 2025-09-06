@@ -3,14 +3,11 @@ import { motion } from 'framer-motion'
 
 export const Footer: React.FC = () => {
   const containerVariants = {
-    hidden: { opacity: 0, y: 80 },
+    hidden: { opacity: 0, y: 60 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        type: "spring", 
-        stiffness: 80,
-        damping: 20,
         duration: 0.8,
         staggerChildren: 0.2
       }
@@ -18,14 +15,11 @@ export const Footer: React.FC = () => {
   }
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 40 },
+    hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        type: "spring", 
-        stiffness: 80,
-        damping: 20,
         duration: 0.8
       }
     }
@@ -45,44 +39,36 @@ export const Footer: React.FC = () => {
         <motion.nav aria-label="Footer" variants={itemVariants}>
           <ul className="flex items-center gap-4">
             <li>
-              <motion.a 
-                className="hover:text-primary transition-colors duration-300" 
+              <a 
+                className="hover:text-primary transition-colors" 
                 href="#about"
-                whileHover={{ y: -2, scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
                 About
-              </motion.a>
+              </a>
             </li>
             <li>
-              <motion.a 
-                className="hover:text-primary transition-colors duration-300" 
+              <a 
+                className="hover:text-primary transition-colors" 
                 href="#skills"
-                whileHover={{ y: -2, scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
                 Skills
-              </motion.a>
+              </a>
             </li>
             <li>
-              <motion.a 
-                className="hover:text-primary transition-colors duration-300" 
+              <a 
+                className="hover:text-primary transition-colors" 
                 href="#work"
-                whileHover={{ y: -2, scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
                 Work
-              </motion.a>
+              </a>
             </li>
             <li>
-              <motion.a 
-                className="hover:text-primary transition-colors duration-300" 
+              <a 
+                className="hover:text-primary transition-colors" 
                 href="#contact"
-                whileHover={{ y: -2, scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
                 Contact
-              </motion.a>
+              </a>
             </li>
           </ul>
         </motion.nav>

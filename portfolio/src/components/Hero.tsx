@@ -19,21 +19,7 @@ export const Hero: React.FC = () => {
       y: 0,
       opacity: 1,
       transition: {
-        type: "spring", 
-        stiffness: 80,
-        damping: 20,
         duration: 0.8
-      }
-    }
-  }
-
-  const glitchVariants = {
-    initial: { x: 0 },
-    hover: {
-      x: [0, -2, 2, -1, 1, 0],
-      transition: {
-        duration: 0.3,
-        ease: "easeInOut"
       }
     }
   }
@@ -50,15 +36,12 @@ export const Hero: React.FC = () => {
         >
           {/* Headline */}
           <motion.div className="space-y-4" variants={itemVariants}>
-            <motion.h1 
+            <h1 
               id="hero-title" 
               className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 leading-tight"
-              variants={glitchVariants}
-              initial="initial"
-              whileHover="hover"
             >
               From raw footage to perfectly cooked videos.
-            </motion.h1>
+            </h1>
             <motion.p 
               className="text-slate-600 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed"
               variants={itemVariants}
@@ -71,23 +54,16 @@ export const Hero: React.FC = () => {
           <motion.div 
             className="w-full max-w-2xl"
             variants={itemVariants}
-            whileHover={{ 
-              scale: 1.02,
-              rotateX: 5,
-              rotateY: 5,
-              transition: { type: "spring", stiffness: 300, damping: 20 }
-            }}
           >
-            <motion.figure 
+            <figure 
               className="card overflow-hidden"
-              style={{ transformStyle: "preserve-3d" }}
             >
               <video controls preload="metadata" className="w-full h-auto" poster="/media/vsl-poster.jpg" aria-label="VSL demo video">
                 <source src="/media/VSL_video.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
               <figcaption className="sr-only">VSL showcase</figcaption>
-            </motion.figure>
+            </figure>
           </motion.div>
 
           {/* Buttons */}
@@ -95,32 +71,18 @@ export const Hero: React.FC = () => {
             className="flex flex-col sm:flex-row gap-4"
             variants={itemVariants}
           >
-            <motion.a 
+            <a 
               href="#contact" 
               className="btn btn-primary px-8 py-4 text-lg"
-              whileHover={{ 
-                scale: 1.05, 
-                y: -3,
-                boxShadow: "0 20px 40px -15px rgba(11, 37, 69, 0.4)"
-              }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
               Let's work together
-            </motion.a>
-            <motion.a 
+            </a>
+            <a 
               href="#work" 
               className="btn btn-secondary px-8 py-4 text-lg"
-              whileHover={{ 
-                scale: 1.05, 
-                y: -3,
-                backgroundColor: "#f1f5f9"
-              }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
               Portfólio
-            </motion.a>
+            </a>
           </motion.div>
         </motion.div>
       </div>
