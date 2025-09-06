@@ -8,20 +8,21 @@ import { Work } from './components/Work'
 import { Contact } from './components/Contact'
 import { Footer } from './components/Footer'
 import { useInertiaScroll } from './hooks/useInertiaScroll'
+import type { Variants } from 'framer-motion'
 
 const App: React.FC = () => {
   const scrollRef = useInertiaScroll()
   
-  const pageVariants = {
+  const pageVariants: Variants = {
     initial: { opacity: 0 },
     animate: { 
       opacity: 1,
       transition: {
         duration: 0.8,
-        ease: "easeOut" as const
+        ease: "easeOut"
       }
     }
-  } as const;
+  };
 
   return (
     <motion.div
