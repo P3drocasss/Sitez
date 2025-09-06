@@ -1,20 +1,22 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import type { Variants } from 'framer-motion'
 
 export const Footer: React.FC = () => {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
         duration: 0.6,
-        staggerChildren: 0.1
+        staggerChildren: 0.1,
+        ease: "easeOut"
       }
     }
   }
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
@@ -22,7 +24,8 @@ export const Footer: React.FC = () => {
       transition: {
         type: "spring",
         stiffness: 100,
-        damping: 12
+        damping: 12,
+        duration: 0.4
       }
     }
   }

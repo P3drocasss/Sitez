@@ -1,18 +1,20 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import type { Variants } from 'framer-motion'
 
 export const Contact: React.FC = () => {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.3
+        staggerChildren: 0.3,
+        duration: 0.6
       }
     }
   }
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { y: 50, opacity: 0 },
     visible: {
       y: 0,
@@ -20,7 +22,8 @@ export const Contact: React.FC = () => {
       transition: {
         type: "spring",
         stiffness: 100,
-        damping: 12
+        damping: 12,
+        duration: 0.6
       }
     }
   }

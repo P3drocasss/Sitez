@@ -1,19 +1,21 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import type { Variants } from 'framer-motion'
 
 export const Hero: React.FC = () => {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
         staggerChildren: 0.2,
-        delayChildren: 0.3
+        delayChildren: 0.3,
+        duration: 0.6
       }
     }
   }
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { y: 50, opacity: 0 },
     visible: {
       y: 0,
@@ -21,18 +23,20 @@ export const Hero: React.FC = () => {
       transition: {
         type: "spring",
         stiffness: 100,
-        damping: 12
+        damping: 12,
+        duration: 0.6
       }
     }
   }
 
-  const glitchVariants = {
+  const glitchVariants: Variants = {
     initial: { x: 0 },
     hover: {
       x: [0, -2, 2, -1, 1, 0],
       transition: {
         duration: 0.3,
-        ease: "easeInOut"
+        ease: "easeInOut",
+        times: [0, 0.2, 0.4, 0.6, 0.8, 1]
       }
     }
   }

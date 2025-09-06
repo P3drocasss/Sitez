@@ -1,18 +1,20 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import type { Variants } from 'framer-motion'
 
 export const Skills: React.FC = () => {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2
+        staggerChildren: 0.2,
+        duration: 0.6
       }
     }
   }
 
-  const cardVariants = {
+  const cardVariants: Variants = {
     hidden: { y: 50, opacity: 0, rotateX: -15 },
     visible: {
       y: 0,
@@ -21,7 +23,8 @@ export const Skills: React.FC = () => {
       transition: {
         type: "spring",
         stiffness: 100,
-        damping: 12
+        damping: 12,
+        duration: 0.6
       }
     }
   }
