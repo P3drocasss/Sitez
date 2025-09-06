@@ -13,15 +13,16 @@ export const Skills: React.FC = () => {
   }
 
   const cardVariants = {
-    hidden: { y: 50, opacity: 0, rotateX: -15 },
+    hidden: { y: 80, opacity: 0, scale: 0.8 },
     visible: {
       y: 0,
       opacity: 1,
-      rotateX: 0,
+      scale: 1,
       transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 12
+        type: "spring", 
+        stiffness: 80,
+        damping: 20,
+        duration: 0.8
       }
     }
   }
@@ -33,7 +34,7 @@ export const Skills: React.FC = () => {
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.2 }}
     >
       <div className="space-y-8 text-center">
         <motion.header className="space-y-2" variants={cardVariants}>

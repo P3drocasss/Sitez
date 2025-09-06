@@ -26,28 +26,30 @@ export const Work: React.FC = () => {
   }
 
   const videoVariants = {
-    hidden: { y: 50, opacity: 0, scale: 0.9 },
+    hidden: { y: 80, opacity: 0, scale: 0.8 },
     visible: {
       y: 0,
       opacity: 1,
       scale: 1,
       transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 12
+        type: "spring", 
+        stiffness: 80,
+        damping: 20,
+        duration: 0.8
       }
     }
   }
 
   const sectionVariants = {
-    hidden: { y: 30, opacity: 0 },
+    hidden: { y: 60, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
       transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 12
+        type: "spring", 
+        stiffness: 80,
+        damping: 20,
+        duration: 0.8
       }
     }
   }

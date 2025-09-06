@@ -3,26 +3,30 @@ import { motion } from 'framer-motion'
 
 export const Footer: React.FC = () => {
   const containerVariants = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { opacity: 0, y: 80 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6,
-        staggerChildren: 0.1
+        type: "spring", 
+        stiffness: 80,
+        damping: 20,
+        duration: 0.8,
+        staggerChildren: 0.2
       }
     }
   }
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 40 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 12
+        type: "spring", 
+        stiffness: 80,
+        damping: 20,
+        duration: 0.8
       }
     }
   }
@@ -34,7 +38,7 @@ export const Footer: React.FC = () => {
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true }}
+      viewport={{ once: true, amount: 0.2 }}
     >
       <div className="container-responsive flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-600">
         <motion.p variants={itemVariants}>© {new Date().getFullYear()} Nnaemeka Emmanuel</motion.p>

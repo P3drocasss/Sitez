@@ -13,14 +13,15 @@ export const About: React.FC = () => {
   }
 
   const itemVariants = {
-    hidden: { y: 50, opacity: 0 },
+    hidden: { y: 80, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
       transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 12
+        type: "spring", 
+        stiffness: 80,
+        damping: 20,
+        duration: 0.8
       }
     }
   }
@@ -33,7 +34,7 @@ export const About: React.FC = () => {
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.2 }}
     >
       <div className="max-w-4xl mx-auto px-6">
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">

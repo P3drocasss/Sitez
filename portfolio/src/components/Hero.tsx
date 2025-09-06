@@ -7,21 +7,22 @@ export const Hero: React.FC = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3
+        staggerChildren: 0.3,
+        delayChildren: 0.1
       }
     }
   }
 
   const itemVariants = {
-    hidden: { y: 50, opacity: 0 },
+    hidden: { y: 80, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
       transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 12
+        type: "spring", 
+        stiffness: 80,
+        damping: 20,
+        duration: 0.8
       }
     }
   }
@@ -44,7 +45,8 @@ export const Hero: React.FC = () => {
           className="flex flex-col items-center text-center space-y-8"
           variants={containerVariants}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
         >
           {/* Headline */}
           <motion.div className="space-y-4" variants={itemVariants}>
